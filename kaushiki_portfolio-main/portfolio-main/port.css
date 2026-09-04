@@ -1,0 +1,1062 @@
+/* =========================================================
+   KAUSHIKI MISHRA
+   Data Analyst + Competitive Programmer Portfolio
+   ========================================================= */
+
+
+/* ================= GOOGLE FONTS ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* ================= COMMON ================= */
+
+section {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ================= SECTION TITLES ================= */
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 18px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: crimson;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .menu {
+    margin-left: auto;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 22px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+
+/* ================= MOBILE MENU BUTTON ================= */
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* ================= SCROLL UP ================= */
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    filter: brightness(90%);
+}
+
+
+/* ================= HOME ================= */
+
+.home {
+    display: flex;
+    position: relative;
+    background: url("Rum.jpg") no-repeat center;
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.52);
+}
+
+.home .max-width {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about .title::after {
+    content: "who i am";
+}
+
+.about .about-content {
+    align-items: center;
+}
+
+.about .about-content .left {
+    width: 40%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about .about-content .right .text span {
+    color: crimson;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.about .about-content .right > a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right > a:hover {
+    color: crimson;
+    background: none;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills {
+    background: #fff;
+}
+
+.skills .title::after {
+    content: "what i know";
+}
+
+.skills .skills-content {
+    align-items: flex-start;
+}
+
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+
+/* Skills Information */
+
+.skills .skills-content .right .bars {
+    margin-bottom: 24px;
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 8px;
+}
+
+.skills .skills-content .right .info span {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.skills .skills-content .right .info span:first-child {
+    min-width: 180px;
+}
+
+.skills .skills-content .right .info span:last-child {
+    text-align: right;
+    color: #555;
+}
+
+.skills .skills-content .right h5 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    color: #111;
+}
+
+
+/* Simple Accent Line
+   Not a percentage/proficiency bar */
+
+.skills .skills-content .right .line {
+    width: 60px;
+    height: 3px;
+    background: crimson;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+
+/* ================= DATA ANALYTICS PROJECTS ================= */
+
+.services {
+    color: #fff;
+    background: #111;
+}
+
+.services .title::before {
+    background: #fff;
+}
+
+.services .title::after {
+    content: "selected work";
+    background: #111;
+}
+
+.services .serv-content {
+    align-items: stretch;
+    gap: 30px;
+}
+
+.services .serv-content .card {
+    width: calc(50% - 15px);
+    background: #222;
+    text-align: center;
+    border-radius: 10px;
+    padding: 40px 35px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover {
+    background: crimson;
+    transform: translateY(-8px);
+}
+
+.services .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+    transform: scale(1.02);
+}
+
+
+/* Project Icon */
+
+.project-icon {
+    height: 90px;
+    width: 90px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid crimson;
+    color: crimson;
+    font-size: 40px;
+    transition: all 0.3s ease;
+}
+
+.services .card:hover .project-icon {
+    border-color: #fff;
+    color: #fff;
+}
+
+
+/* Project Title */
+
+.services .serv-content .card .text {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 20px;
+}
+
+.services .serv-content .card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.services .serv-content .card:hover p {
+    color: #fff;
+}
+
+
+/* Bold labels */
+
+.services .serv-content .card p b {
+    color: #fff;
+}
+
+
+/* Project Links */
+
+.services .serv-content .card p a {
+    color: crimson;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover p a {
+    color: #fff;
+}
+
+.services .serv-content .card p a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= DSA & COMPETITIVE PROGRAMMING ================= */
+
+#competitive-programming {
+    background: #181818;
+}
+
+#competitive-programming .title::before {
+    background: #fff;
+}
+
+#competitive-programming .title::after {
+    content: "problem solving";
+    background: #181818;
+}
+
+
+/* Three cards */
+
+#competitive-programming .serv-content {
+    align-items: stretch;
+}
+
+#competitive-programming .card {
+    width: calc(33.333% - 20px);
+}
+
+
+/* DSA / CP Icons */
+
+#competitive-programming .project-icon {
+    border-color: crimson;
+    color: crimson;
+}
+
+#competitive-programming .card:hover .project-icon {
+    border-color: #fff;
+    color: #fff;
+}
+
+
+
+
+/* ================= OWL CAROUSEL ================= */
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson !important;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #fff;
+}
+
+.contact .title::after {
+    content: "get in touch";
+}
+
+.contact .contact-content {
+    align-items: flex-start;
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact .contact-content .left p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.contact .contact-content .left .icons {
+    margin: 15px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    min-height: 55px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 25px;
+}
+
+.contact .contact-content .row i {
+    font-size: 23px;
+    color: crimson;
+    width: 30px;
+    text-align: center;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 600;
+}
+
+.contact .contact-content .info .sub-title {
+    color: #555;
+}
+
+
+/* Contact Links */
+
+.contact-link {
+    color: crimson !important;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= CONTACT FORM ================= */
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea {
+    height: 110px;
+    width: 100%;
+}
+
+.contact .right form .name {
+    margin-right: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+    border-color: crimson;
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button-area {
+    display: flex;
+    align-items: center;
+}
+
+.right form .button-area button {
+    color: #fff;
+    display: block;
+    width: 160px;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    background: crimson;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.right form .button-area button:hover {
+    color: crimson;
+    background: none;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* ================= 1104px ================= */
+
+@media (max-width: 1104px) {
+
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
+    }
+
+}
+
+
+/* ================= 991px ================= */
+
+@media (max-width: 991px) {
+
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .navbar .menu li a {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+}
+
+
+/* ================= 947px ================= */
+
+@media (max-width: 947px) {
+
+    /* Mobile menu button */
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+
+    /* Mobile navigation */
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+        margin-left: 0;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+
+    /* Hero */
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+
+
+    .max-width {
+        max-width: 930px;
+    }
+
+
+    /* About */
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 50px;
+    }
+
+    .about .about-content .right {
+        width: 100%;
+    }
+
+
+    /* Projects */
+
+    .services .serv-content .card {
+        width: calc(50% - 15px);
+    }
+
+
+    /* DSA & CP */
+
+    #competitive-programming .card {
+        width: calc(50% - 15px);
+    }
+
+
+    /* Skills */
+
+    .skills .skills-content .column {
+        width: 100%;
+    }
+
+    .skills .skills-content .left {
+        margin-bottom: 40px;
+    }
+
+
+    /* Contact */
+
+    .contact .contact-content .column {
+        width: 100%;
+    }
+
+    .contact .contact-content .left {
+        margin-bottom: 40px;
+    }
+
+}
+
+
+/* ================= 690px ================= */
+
+@media (max-width: 690px) {
+
+    section {
+        padding: 80px 0;
+    }
+
+    .max-width {
+        padding: 0 23px;
+    }
+
+
+    /* Hero */
+
+    .home .home-content .text-1 {
+        font-size: 22px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 55px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 30px;
+    }
+
+
+    /* About */
+
+    .about .about-content .left img {
+        height: 300px;
+        width: 300px;
+    }
+
+
+    /* Projects */
+
+    .services .serv-content .card {
+        width: 100%;
+    }
+
+
+    /* DSA */
+
+    #competitive-programming .card {
+        width: 100%;
+    }
+
+
+    /* Skills */
+
+    .skills .skills-content .right .info {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .skills .skills-content .right .info span:first-child {
+        min-width: auto;
+    }
+
+    .skills .skills-content .right .info span:last-child {
+        text-align: left;
+    }
+
+
+}
+
+
+/* ================= 500px ================= */
+
+@media (max-width: 500px) {
+
+    section {
+        padding: 70px 0;
+    }
+
+
+    /* Section titles */
+
+    section .title {
+        font-size: 32px;
+    }
+
+
+    /* Hero */
+
+    .home .home-content .text-2 {
+        font-size: 43px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 25px;
+    }
+
+
+    /* About */
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+
+    .about .about-content .left img {
+        height: 260px;
+        width: 260px;
+    }
+
+
+    /* Contact form */
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+
+    /* Project cards */
+
+    .services .serv-content .card {
+        padding: 30px 20px;
+    }
+
+    .services .serv-content .card .text {
+        font-size: 21px;
+    }
+
+
+    /* Experience */
+
+    .teams .carousel .card {
+        padding: 30px 20px;
+    }
+
+    .teams .carousel .card .text {
+        font-size: 21px;
+    }
+
+
+    /* Scroll button */
+
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+
+}
